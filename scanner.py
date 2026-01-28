@@ -27,7 +27,7 @@ def worker_queue():
         port = queue.get()
         if scanner(target, port):
             print(f'\nPort: {port}\nState: OPEN')
-            list_ports_open.append(port)
+            print(socket.getservbyport(port))
          
 def main():
     global queue
