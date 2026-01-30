@@ -4,7 +4,7 @@ from queue import Queue
 
 def scanner(target, port):
     try:
-        # Defining the connection
+        # Defining the connection IPv4 and TCP
         sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sckt.settimeout(1)
         conection = sckt.connect((target, port)) # actually making connection
